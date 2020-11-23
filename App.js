@@ -1,19 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import colors from './app/colors/colors';
+import HomeScreen from './app/HomeScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.two}/>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.three}/>
+      <HomeScreen colorArray={colors.two}/>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.three}/>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.two}/>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.three}/>
+      <HomeScreen colorArray={colors.two}/>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.three}/>
+      <HomeScreen colorArray={colors.three}/>
+      <HomeScreen colorArray={colors.two}/>
+      <HomeScreen colorArray={colors.one}/>
+      <HomeScreen colorArray={colors.three}/>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
