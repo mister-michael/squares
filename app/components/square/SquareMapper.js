@@ -1,16 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import colors from "./colors/colors";
+import { StyleSheet } from "react-native";
+
 import Square from "./Square";
 
-function HomeScreen({colorArray}) {
+function SquareMapper({ colorArray }) {
   const squareArray = [];
 
   const getStuff = () => {
     const randomNumber = Math.floor(Math.random() * 100);
-    console.log(randomNumber);
     for (let i = 0; i <= randomNumber; i++) {
-      squareArray.push(<Square colorArray={colorArray} />);
+      squareArray.push(<Square key={`square-${i}`} colorArray={colorArray} />);
     }
   };
 
@@ -28,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default SquareMapper;
