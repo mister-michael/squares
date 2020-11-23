@@ -9,7 +9,7 @@ function Square({
   borderRadius = 0,
   colorArray
 }) {
-    const randomNumbers = () => {
+    const randomNumber = () => {
         return Math.floor(Math.random() * 8)}
 
 
